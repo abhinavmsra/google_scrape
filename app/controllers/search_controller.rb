@@ -5,7 +5,7 @@ class SearchController < ApplicationController
   end
 
   def create
-    SearchService.parse(params[:data], current_user)
+    SearchService.parse(params[:data], current_user.id)
     head :ok
   end
 end
