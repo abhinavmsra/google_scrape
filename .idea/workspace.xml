@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="2246cae4-7e51-4d7a-8295-0d58524023ac" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
     </list>
     <ignored path="google-scraper.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -31,18 +32,28 @@
       <file leaf-file-name="application.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/application.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+            <state relative-caret-position="108">
+              <caret line="24" column="5" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="database.yml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="database.yml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/database.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="14" column="9" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="9" />
+            <state relative-caret-position="180">
+              <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Gemfile" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Gemfile">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="198">
+              <caret line="58" column="28" selection-start-line="58" selection-start-column="28" selection-end-line="58" selection-end-column="28" />
               <folding />
             </state>
           </provider>
@@ -92,9 +103,9 @@
         <option value="$PROJECT_DIR$/app/controllers/sessions_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/search_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/keywords_controller.rb" />
-        <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/config/database.yml" />
+        <option value="$PROJECT_DIR$/Gemfile" />
       </list>
     </option>
   </component>
@@ -219,7 +230,7 @@
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="SearchEverywhereHistoryKey" value="data&#9;FILE&#9;file:///home/abhi/Desktop/google-scraper/config/database.yml&#10;database&#9;FILE&#9;file:///home/abhi/Desktop/google-scraper/config/database.yml&#10;gem&#9;FILE&#9;file:///home/abhi/Desktop/google-scraper/Gemfile&#10;rou&#9;FILE&#9;file:///home/abhi/Desktop/google-scraper/config/routes.rb&#10;route&#9;FILE&#9;file:///home/abhi/Desktop/google-scraper/config/routes.rb&#10;20160725173853_add_work&#9;FILE&#9;file:///home/abhi/Desktop/google-scraper/db/migrate/20160725173853_add_worker_ip_to_search_results.rb&#10;ge&#9;FILE&#9;file:///home/abhi/Desktop/google-scraper/Gemfile&#10;searc&#9;FILE&#9;file:///home/abhi/Desktop/google-scraper/app/controllers/search_controller.rb&#10;sear&#9;FILE&#9;file:///home/abhi/Desktop/google-scraper/app/models/search_result.rb&#10;sc&#9;FILE&#9;file:///home/abhi/Desktop/google-scraper/db/schema.rb&#10;20160725171531_remove_columns_fr&#9;FILE&#9;file:///home/abhi/Desktop/google-scraper/db/migrate/20160725171531_remove_columns_from_search_results.rb&#10;link&#9;FILE&#9;file:///home/abhi/Desktop/google-scraper/app/models/link.rb&#10;20160725170604_remove_url&#9;FILE&#9;file:///home/abhi/Desktop/google-scraper/db/migrate/20160725170604_remove_url_column_from_esarch_results.rb&#10;sche&#9;FILE&#9;file:///home/abhi/Desktop/google-scraper/db/schema.rb&#10;20160725164457_renam&#9;FILE&#9;file:///home/abhi/Desktop/google-scraper/db/migrate/20160725164457_rename_type_column_of_links_to_link_type.rb&#10;app&#9;null&#9;null&#10;app.ht&#9;FILE&#9;file:///home/abhi/Desktop/google-scraper/app/views/layouts/application.html.erb&#10;routes&#9;FILE&#9;file:///home/abhi/Desktop/google-scraper/config/routes.rb&#10;gemfile&#9;null&#9;null&#10;omn&#9;FILE&#9;file:///home/abhi/Desktop/google-scraper/config/initializers/omniauth.rb&#10;user&#9;FILE&#9;file:///home/abhi/Desktop/google-scraper/app/controllers/users_controller.rb" />
+    <property name="SearchEverywhereHistoryKey" value="gem&#9;FILE&#9;file:///home/abhi/Desktop/google-scraper/Gemfile&#10;data&#9;FILE&#9;file:///home/abhi/Desktop/google-scraper/config/database.yml&#10;database&#9;FILE&#9;file:///home/abhi/Desktop/google-scraper/config/database.yml&#10;rou&#9;FILE&#9;file:///home/abhi/Desktop/google-scraper/config/routes.rb&#10;route&#9;FILE&#9;file:///home/abhi/Desktop/google-scraper/config/routes.rb&#10;20160725173853_add_work&#9;FILE&#9;file:///home/abhi/Desktop/google-scraper/db/migrate/20160725173853_add_worker_ip_to_search_results.rb&#10;ge&#9;FILE&#9;file:///home/abhi/Desktop/google-scraper/Gemfile&#10;searc&#9;FILE&#9;file:///home/abhi/Desktop/google-scraper/app/controllers/search_controller.rb&#10;sear&#9;FILE&#9;file:///home/abhi/Desktop/google-scraper/app/models/search_result.rb&#10;sc&#9;FILE&#9;file:///home/abhi/Desktop/google-scraper/db/schema.rb&#10;20160725171531_remove_columns_fr&#9;FILE&#9;file:///home/abhi/Desktop/google-scraper/db/migrate/20160725171531_remove_columns_from_search_results.rb&#10;link&#9;FILE&#9;file:///home/abhi/Desktop/google-scraper/app/models/link.rb&#10;20160725170604_remove_url&#9;FILE&#9;file:///home/abhi/Desktop/google-scraper/db/migrate/20160725170604_remove_url_column_from_esarch_results.rb&#10;sche&#9;FILE&#9;file:///home/abhi/Desktop/google-scraper/db/schema.rb&#10;20160725164457_renam&#9;FILE&#9;file:///home/abhi/Desktop/google-scraper/db/migrate/20160725164457_rename_type_column_of_links_to_link_type.rb&#10;app&#9;null&#9;null&#10;app.ht&#9;FILE&#9;file:///home/abhi/Desktop/google-scraper/app/views/layouts/application.html.erb&#10;routes&#9;FILE&#9;file:///home/abhi/Desktop/google-scraper/config/routes.rb&#10;gemfile&#9;null&#9;null&#10;omn&#9;FILE&#9;file:///home/abhi/Desktop/google-scraper/config/initializers/omniauth.rb&#10;user&#9;FILE&#9;file:///home/abhi/Desktop/google-scraper/app/controllers/users_controller.rb" />
     <property name="js-jscs-nodeInterpreter" value="/usr/local/bin/node" />
     <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.ruby.settings.RubyActiveModuleSdkConfigurable" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
@@ -446,16 +457,16 @@
       <workItem from="1469447937244" duration="1000" />
       <workItem from="1469450917947" duration="12924000" />
       <workItem from="1469493781271" duration="5010000" />
-      <workItem from="1469504077947" duration="732000" />
+      <workItem from="1469504077947" duration="1035000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22633000" />
+    <option name="totallyTimeSpent" value="22936000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="-4" width="1360" height="772" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26027396" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -464,7 +475,7 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.48867315" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.48867315" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -773,25 +784,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Gemfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="60" column="0" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/application.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+        <state relative-caret-position="108">
+          <caret line="24" column="5" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/config/database.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="14" column="9" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="9" />
+        <state relative-caret-position="180">
+          <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gemfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="58" column="28" selection-start-line="58" selection-start-column="28" selection-end-line="58" selection-end-column="28" />
           <folding />
         </state>
       </provider>
