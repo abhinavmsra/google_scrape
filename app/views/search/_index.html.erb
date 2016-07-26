@@ -1,0 +1,16 @@
+<div class="row">
+  <div class="page-header">
+    <h1>Upload Keywords File</h1>
+  </div>
+  <div class="alert"></div>
+  <div class="col-md-12">
+    <%= form_tag '/search', id: 'file-upload-form', role: 'form' do %>
+      <div class="form-group">
+        <label for="keywords">Upload .csv File*:</label>
+        <%= file_field_tag :keywords, class: 'form-control' %>
+        <span id="keywords_error"></span>
+      </div>
+      <button type="submit" class="btn btn-default">Submit</button>
+    <% end %>
+  </div>
+</div>

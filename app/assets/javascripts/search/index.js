@@ -5,35 +5,19 @@
 ;(function () {
   'use strict';
 
-  $('.search.index').ready(function () {
+  $('.users.index').ready(function () {
 
     var constants,
     Index = {
 
       settings: {
         $form: $('#file-upload-form'),
-        formValidationAttributes: {
-          focusInvalid: false,
-          rules: {
-            "search_file": {
-              required: true,
-              extension: 'csv'
-            }
-          },
-          messages: {
-            "search_file": {
-              required: 'Required',
-              extension: 'Only .csv files are supported'
-            }
-          },
-          errorPlacement: function (error, element) {
-            error.appendTo('#' + element.attr('id') + '_error');
-          },
-          submitHandler: function(form) {
-            debugger;
-            return false;
-          }
-        }
+        $alertDiv: $('.alert'),
+        successMsg: 'Your file has been uploaded. Keywords will be available' +
+        ' once parsed',
+        errorMsg: 'Uploaded file could not be parsed. Please check it.',
+        fadeOutInterval: 10000,
+        uploadPath: '/search'
       },
 
       init: function () {
@@ -46,12 +30,14 @@
           focusInvalid: false,
           rules: {
             "keywords": {
-              required: true
+              required: true,
+              extension: "csv"
             }
           },
           messages: {
             "keywords": {
-              required: 'Required'
+              required: 'Required',
+              extension: 'Only .csv files are supported.'
             }
           },
           errorPlacement: function (error, element) {
@@ -62,7 +48,6 @@
             var file = $('#keywords')[0].files[0];
 
             reader.addEventListener('load', function () {
-              console.log(reader.result)
               Index.formSubmitHandler(reader.result);
             }, false);
 
@@ -77,10 +62,26 @@
       formSubmitHandler: function(data) {
         $.ajax({
           type: "POST",
-          url: '/search',
+          url: constants.uploadPath,
           data: {data: data},
           dataType: "JSON"
-        })
+        }).done(Index.successHandler).fail(Index.errorHandler)
+      },
+
+      successHandler: function() {
+        constants.$alertDiv
+        .removeClass('alert-danger')
+        .addClass('alert-success')
+        .html(constants.successMsg)
+        .fadeOut(constants.fadeOutInterval);
+      },
+
+      errorHandler: function() {
+        constants.$alertDiv
+        .removeClass('alert-success')
+        .addClass('alert-danger')
+        .html(constants.errorMsg)
+        .fadeOut(constants.fadeOutInterval);
       }
     };
 

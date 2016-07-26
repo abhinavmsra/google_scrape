@@ -1,7 +1,7 @@
 module SearchService
   def SearchService.parse(data, user_id)
     raw_data = data.gsub('data:text/csv;base64,', '')
-    decoded_data = Base64.decode64(raw_data)
+    decoded_data = Base64.strict_decode64(raw_data)
     parsed_data = decoded_data.gsub("\n", '').split(',')
 
     parsed_data.each do |keyword|

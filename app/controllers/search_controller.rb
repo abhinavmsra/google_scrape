@@ -5,7 +5,12 @@ class SearchController < ApplicationController
   end
 
   def create
-    SearchService.parse(params[:data], current_user.id)
-    head :ok
+    begin
+      SearchService.parse(params[:data], current_user.id)
+      response, status  = 'success', :ok
+    rescue ArgumentError
+      response, status = 'error', :bad_request
+    end
+    render json: {status: response}, status: status
   end
 end
