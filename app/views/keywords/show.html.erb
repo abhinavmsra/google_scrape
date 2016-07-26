@@ -1,0 +1,96 @@
+<div id="wrapper" class="">
+  <%= render 'layouts/sidebar' %>
+
+  <!-- Page Content -->
+  <div id="page-content-wrapper">
+    <div class="col-md-12 lp-header">
+      <div class="col-md-9"></div>
+      <div id="col-md-3">
+        <ul class="nav navbar-nav pull-right">
+          <li><%= link_to 'Log Out', logout_path, method: :delete %></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="row">
+            <div class="page-header">
+              <h1><%= @keyword.key_word %></h1>
+            </div>
+          <ul class="nav nav-tabs nav-justified">
+            <li class="active"><a data-toggle="pill" href="#details">Details</a></li>
+            <li><a data-toggle="pill" href="#html">Preview</a></li>
+          </ul>
+          <div class="tab-content">
+            <div id="details" class="tab-pane fade in active">
+              <p>
+                <div class="table-responsive">
+                <table class="table">
+                  <tbody>
+                    <tr>
+                      <td>Number of AdWords at Top Position</td>
+                      <td><%= @keyword.ad_words_count_at_top_position %></td>
+                    </tr>
+                    <tr>
+                      <td>AdWords Links at Top Position</td>
+                      <td>
+                        <ul>
+                          <% @keyword.links.top_ad.each do |link| %>
+                            <li><%= link_to link.url %></li>
+                          <% end %>
+                        </ul>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Number of AdWords at Bottom Position</td>
+                      <td><%= @keyword.ad_words_count_at_bottom_position %></td>
+                    </tr>
+                    <tr>
+                      <td>AdWords Links at Bottom Position</td>
+                      <td>
+                        <ul>
+                          <% @keyword.links.bottom_ad.each do |link| %>
+                            <li><%= link_to link.url %></li>
+                          <% end %>
+                        </ul>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Total Number of Non AdWords</td>
+                      <td><%= @keyword.non_ad_words_count %></td>
+                    </tr>
+                    <tr>
+                      <td>Non AdWords Links</td>
+                      <td>
+                        <ul>
+                          <% @keyword.links.non_ad.each do |link| %>
+                            <li><%= link_to link.url %></li>
+                          <% end %>
+                        </ul>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Total Number of Links</td>
+                      <td><%= @keyword.links_count %></td>
+                    </tr>
+                    <tr>
+                      <td>Total Records for Keyword</td>
+                      <td><%= @keyword.search_count %></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              </p>
+            </div>
+            <div id="html" class="tab-pane fade">
+              <p><%= @keyword.html_code.html_safe %></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  <!-- /#page-content-wrapper -->
+</div>

@@ -13,6 +13,7 @@
       settings: {
         $form: $('#file-upload-form'),
         $alertDiv: $('.alert'),
+        $fileField: $('#keywords'),
         successMsg: 'Your file has been uploaded. Keywords will be available' +
         ' once parsed',
         errorMsg: 'Uploaded file could not be parsed. Please check it.',
@@ -65,7 +66,10 @@
           url: constants.uploadPath,
           data: {data: data},
           dataType: "JSON"
-        }).done(Index.successHandler).fail(Index.errorHandler)
+        })
+        .done(Index.successHandler)
+        .fail(Index.errorHandler)
+        .always(Index.alwaysHandler)
       },
 
       successHandler: function() {
@@ -82,6 +86,10 @@
         .addClass('alert-danger')
         .html(constants.errorMsg)
         .fadeOut(constants.fadeOutInterval);
+      },
+
+      alwaysHandler: function() {
+        constants.$fileField.val("");
       }
     };
 
