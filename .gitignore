@@ -17,4 +17,4 @@
 !/log/.keep
 !/tmp/.keep
 /config/*.yml
-.idea
+.idea/*
