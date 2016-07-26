@@ -19,7 +19,7 @@ module GoogleScraper
       #{config.root}/app/uploaders
       #{config.root}/app/datatables/concerns
     )
-    config.public_file_server.enabled = true
+    config.server_static_assets= true
     # Enable the asset pipeline
     config.assets.enabled = true
   end

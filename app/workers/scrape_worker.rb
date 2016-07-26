@@ -31,7 +31,13 @@ class ScrapeWorker
     end
 
     total_search_count = parse_page.at_css('#resultStats').text.gsub(/\D/, '')
+    dummy = {
+      key_word: keyword, user_id: user_id, search_count: total_search_count,
+      links_count: 23, html_code: response.body,
+      links_attributes: links_attributes
+    }
 
+    pp dummy
     SearchResult.create({
       key_word: keyword, user_id: user_id, search_count: total_search_count,
       links_count: 23, html_code: response.body,
