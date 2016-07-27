@@ -151,7 +151,6 @@
     <orderEntry type="library" scope="PROVIDED" name="multi_json (v1.12.1, RVM: ruby-2.3.0 [global]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="multi_xml (v0.5.5, RVM: ruby-2.3.0 [global]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="multipart-post (v2.0.0, RVM: ruby-2.3.0 [global]) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="mysql2 (v0.4.4, RVM: ruby-2.3.0 [global]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="nio4r (v1.2.1, RVM: ruby-2.3.0 [global]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="omniauth (v1.3.1, RVM: ruby-2.3.0 [global]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="pg (v0.18.4, RVM: ruby-2.3.0 [global]) [gem]" level="application" />

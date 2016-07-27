@@ -5,6 +5,7 @@ class ScrapeWorker
   include Sidekiq::Worker
 
   GOOGLE_BASE_URL = 'https://www.google.com/search?q='
+  PUBLIC_IP_FETCH_API = 'https://api.ipify.org?format=json'
   TOP_AD_CSS_CLASS = '._Ak#_Ltg'
   BOTTOM_AD_CSS_CLASS = '._Ak#_Ktg'
   ADS_CSS_IDENTIFIER = 'li.ads-ad'
@@ -18,6 +19,8 @@ class ScrapeWorker
 
     response = HTTParty.get("#{GOOGLE_BASE_URL}#{query_key_word}")
     parse_page = Nokogiri::HTML(response)
+
+    ip = HTTParty.get(PUBLIC_IP_FETCH_API)['ip']
 
     links_attributes = []
 
@@ -47,6 +50,7 @@ class ScrapeWorker
       search_count: total_search_count,
       links_count: total_links_count,
       html_code: response.body,
+      worker_ip: ip,
       links_attributes: links_attributes
     })
   end
