@@ -1,4 +1,4 @@
-module Authorization::SearchAuthorization
+module Authorization::UserAuthorization
   include Authorization
   extend ActiveSupport::Concern
 

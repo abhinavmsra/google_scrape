@@ -1,8 +1,8 @@
 class KeywordsController < ApplicationController
-  include Authorization::SearchAuthorization
+  include Authorization::UserAuthorization
 
   def index
-    @keywords = SearchResult.paginate(page: params[:page], per_page: 10)
+    @keywords = SearchResult.paginate(page: params[:page], per_page: 20)
   end
 
   def show

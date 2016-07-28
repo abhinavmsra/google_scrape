@@ -48,6 +48,8 @@
       /*
       *  JSON Prettify code copied from:
       *   http://stackoverflow.com/questions/4810841/how-can-i-pretty-print-json-using-javascript#answer-7220510
+      *
+      *   Changed the code slightly to detect URLs and append the <a> tag then
       * */
       syntaxHighlight: function(json) {
         var urlRegex = new RegExp(/[-a-zA-Z0-9@:%_\+.~#?&//=]{2,256}\.[a-z]{2,4}\b(\/[-a-zA-Z0-9@:%_\+.~#?&//=]*)?/gi);

@@ -1,3 +1,5 @@
+# Module that decodes the passed list of words,
+# and enqueues them for scraping
 module SearchService
   def SearchService.parse(data, user_id)
     raw_data = data.gsub('data:text/csv;base64,', '')

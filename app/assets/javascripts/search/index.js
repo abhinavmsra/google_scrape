@@ -48,6 +48,7 @@
             var reader  = new FileReader();
             var file = $('#keywords')[0].files[0];
 
+            // Encodes the uploaded file to Base64
             reader.addEventListener('load', function () {
               Index.formSubmitHandler(reader.result);
             }, false);
