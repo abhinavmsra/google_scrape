@@ -77,6 +77,7 @@
         .removeClass('alert-danger')
         .addClass('alert-success')
         .html(constants.successMsg)
+        .show()
         .fadeOut(constants.fadeOutInterval);
       },
 
@@ -85,6 +86,7 @@
         .removeClass('alert-success')
         .addClass('alert-danger')
         .html(constants.errorMsg)
+        .show()
         .fadeOut(constants.fadeOutInterval);
       },
 

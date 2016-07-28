@@ -1,24 +1,25 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+**Introduction**
 
-Things you may want to cover:
+**Google Scraper** is an application that accepts a list of keywords and scrapes the Google Search Page for the words and stores the various metrics of the page.
 
-* Ruby version
+The application employs the Distributed Architecture of Heroku as a coping mechanism from getting black listed by Google. A single Heroku app has various services running on multiple instances having different public IP. 
 
-* System dependencies
+The application runs a main app and enqueues the scraping task in the Redis. Similarly, the same app is deployed on multiple other Heroku instances running Sidekiq workers, each pointing to same Redis server. Now as the scraping task in enqueued in Redis by the main app, the Sidekiq workers pick up the task and perform it. This way we accomplish the task by scraping the page from multiple IP addresses. 
 
-* Configuration
+A constraint worth noticing here is the database connection pool size. The application uses Postgres database as it has larger connection pool on Heroku free tier than MySQL. The application can be scaled by adding the number of Sidekiq workers. However, reducing the concurrency of individual workers is advised as to reduce the suspicion arising from scraping multiple keywords at once from the same machine.
 
-* Database creation
+**Running the App Locally**
 
-* Database initialization
+1. Clone the project from the Git:
 
-* How to run the test suite
+`git clone git://github.com/activemerchant/active_merchant.git`
 
-* Services (job queues, cache servers, search engines, etc.)
+2. Run `bundle install` to install gem dependencies.
 
-* Deployment instructions
+3. Create and migrate the database.
 
-* ...
+4. Run the Rails Server and Sidekiq.
+
+

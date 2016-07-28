@@ -4,6 +4,5 @@ class LinksController < ApplicationController
   end
 
   def query
-
   end
 end
