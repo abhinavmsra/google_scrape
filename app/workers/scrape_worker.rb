@@ -15,9 +15,6 @@ class ScrapeWorker
   TOTAL_RESULTS_CSS_IDENTIFIER = '#resultStats'
 
   def perform(keyword, user_id)
-    p '================================================='
-    p "#{keyword} , #{user_id}"
-    p '================================================='
     query_key_word = keyword.gsub(/\s/, '+')
 
     response = HTTParty.get("#{GOOGLE_BASE_URL}#{query_key_word}")
