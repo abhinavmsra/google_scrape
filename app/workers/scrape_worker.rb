@@ -45,6 +45,17 @@ class ScrapeWorker
     total_search_count = parse_page.at_css(TOTAL_RESULTS_CSS_IDENTIFIER).text.gsub(/\D/, '')
     total_links_count = parse_page.css('a').count
 
+    p '@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@'
+    pp data = {
+      key_word: keyword,
+      user_id: user_id,
+      search_count: total_search_count,
+      links_count: total_links_count,
+      worker_ip: ip,
+      links_attributes: links_attributes
+    }
+    p '@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@'
+
     SearchResult.create!({
       key_word: keyword, user_id: user_id,
       search_count: total_search_count,
