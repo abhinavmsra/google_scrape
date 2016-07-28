@@ -14,7 +14,7 @@ A constraint worth noticing here is the database connection pool size. The appli
 
 1. Clone the project from the Git:
 
-`git clone git://github.com/activemerchant/active_merchant.git`
+`git clone git@github.com:abhinavmsra/google_scrape.git`
 
 2. Run `bundle install` to install gem dependencies.
 
