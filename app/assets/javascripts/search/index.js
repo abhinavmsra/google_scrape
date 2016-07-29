@@ -14,6 +14,7 @@
         $form: $('#file-upload-form'),
         $alertDiv: $('.alert'),
         $fileField: $('#keywords'),
+        $submitBtn: $('.btn'),
         successMsg: 'Your file has been uploaded. Keywords will be available' +
         ' once parsed',
         errorMsg: 'Uploaded file could not be parsed. Please check it.',
@@ -62,6 +63,8 @@
       },
 
       formSubmitHandler: function(data) {
+        constants.$submitBtn.html('<i class="fa fa-circle-o-notch fa-spin fa-fw"></i>');
+
         $.ajax({
           type: "POST",
           url: constants.uploadPath,
@@ -93,6 +96,7 @@
 
       alwaysHandler: function() {
         constants.$fileField.val("");
+        constants.$submitBtn.html('Submit');
       }
     };
 

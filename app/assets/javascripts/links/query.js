@@ -14,6 +14,7 @@
         $form: $('#query-form'),
         $containsField: $('#contains'),
         $urlField: $('#url'),
+        $submitBtn: $('.btn'),
         $pathDepthField: $('#path_depth'),
         $outputContainer: $('#query-result')
       },
@@ -28,13 +29,15 @@
       },
 
       submitHandler: function() {
-       $.ajax({
-         url: '/links?' + $(this).serialize(),
-         method: 'GET'
-       })
-       .done(Query.successHandler);
+        constants.$submitBtn.html('<i class="fa fa-circle-o-notch fa-spin fa-fw"></i>');
+         $.ajax({
+           url: '/links?' + $(this).serialize(),
+           method: 'GET'
+         })
+         .done(Query.successHandler)
+        .always(Query.alwaysHandler);
 
-        return false;
+          return false;
       },
 
       successHandler: function(data) {
@@ -43,6 +46,10 @@
         constants.$outputContainer
         .html(prettify_response)
         .removeClass('hide')
+      },
+
+      alwaysHandler: function() {
+        constants.$submitBtn.html('Submit');
       },
 
       /*

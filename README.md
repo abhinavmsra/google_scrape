@@ -22,4 +22,17 @@ A constraint worth noticing here is the database connection pool size. The appli
 
 4. Run the Rails Server and Sidekiq.
 
+**Current Resources**
+
+1. Main App: https://g-s.herokuapp.com
+2. Workers: 4
+
+    a. https://gs-w1.herokuapp.com
+    
+    b. https://gs-w4.herokuapp.com
+    
+    c. https://powerful-chamber-15630.herokuapp.com
+    
+    d. https://protected-basin-76701.herokuapp.com
+
 
