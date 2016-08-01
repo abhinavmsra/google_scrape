@@ -63,6 +63,8 @@ group :test do
   gem 'shoulda-matchers', require: false # Collection of testing matchers extracted from Shoulda
   gem 'database_cleaner' # Gem for setting strategies for cleaning databases.
   gem 'simplecov', require: false # Gem for Code coverage for Ruby 1.9+
+  gem 'webmock'
+  gem 'vcr'
 end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
