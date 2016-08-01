@@ -19,3 +19,4 @@
 /config/*.yml
 .idea/*
 coverage/
+spec/vcr/
