@@ -25,6 +25,7 @@ require 'shoulda/matchers'
 require 'factory_girl_rails'
 require 'support/database_cleaner'
 require 'support/vcr_setup'
+require 'support/request_helpers'
 require 'sidekiq/testing'
 # Add additional requires below this line. Rails is not loaded until this point!
 
@@ -86,4 +87,5 @@ RSpec.configure do |config|
       with.library :rails
     end
   end
+  config.include Request::JsonHelpers, type: :controller
 end

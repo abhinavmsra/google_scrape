@@ -1,9 +1,6 @@
 class SearchController < ApplicationController
   include Authorization::UserAuthorization
 
-  def index
-  end
-
   # Performs the scraping task of the keywords
   #
   # @params Hash, Base64 encoded csv file of strings

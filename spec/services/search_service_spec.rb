@@ -7,7 +7,7 @@ RSpec.describe SearchService, type: :service do
     let(:base64_text) {'data:text/csv;base64,Y29mZmVlIGhvdXNlIGluIG5ldyB5b3Jr' }
 
     it 'should add a new sidekiq queue' do
-      VCR.use_cassette('services') do
+      VCR.use_cassette('search') do
         expect {
           SearchService.parse(base64_text, user.id)
         }.to change(Sidekiq::Queues['default'], :size).by(1)
