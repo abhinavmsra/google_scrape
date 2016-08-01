@@ -20,3 +20,4 @@
 .idea/*
 coverage/
 spec/vcr/
+tmp
