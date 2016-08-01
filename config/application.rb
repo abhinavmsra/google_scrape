@@ -22,5 +22,8 @@ module GoogleScraper
     config.public_file_server.enabled = true
     # Enable the asset pipeline
     config.assets.enabled = true
+    config.generators do |g|
+      g.factory_girl true
+    end
   end
 end
