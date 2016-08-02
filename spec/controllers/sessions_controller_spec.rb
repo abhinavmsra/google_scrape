@@ -18,10 +18,10 @@ RSpec.describe SessionsController, type: :controller do
       before(:each) do
         user = create :user
         request.env['omniauth.auth'] = (FactoryGirl.build :auth_param, uid: user.uid, provider: user.provider).stringify_keys
+        post :create, params: { provider: 'google' }
       end
 
       it 'should login the user' do
-        post :create, params: { provider: 'google' }
         expect(@request.session[:user_id]).to eq(User.last.id)
       end
     end
@@ -29,15 +29,14 @@ RSpec.describe SessionsController, type: :controller do
     context 'when request params are valid' do
       before(:each) do
         request.env['omniauth.auth'] = (FactoryGirl.build :auth_param).stringify_keys
+        post :create, params: { provider: 'google' }
       end
 
       it 'should redirect to root_path' do
-        post :create, params: { provider: 'google' }
         expect(response).to redirect_to(root_path)
       end
 
       it 'should set the success flash' do
-        post :create, params: { provider: 'google' }
         expect(flash[:success]).to be_present
       end
     end
@@ -45,15 +44,14 @@ RSpec.describe SessionsController, type: :controller do
     context 'when request params are invalid' do
       before(:each) do
         request.env['omniauth.auth'] = ''
+        post :create, params: { provider: 'google' }
       end
 
       it 'should redirect to root_path' do
-        post :create, params: { provider: 'google' }
         expect(response).to redirect_to(root_path)
       end
 
       it 'should set the warning flash' do
-        post :create, params: { provider: 'google' }
         expect(flash[:warning]).to be_present
       end
     end

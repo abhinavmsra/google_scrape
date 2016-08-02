@@ -1,6 +1,5 @@
 source 'https://rubygems.org'
 
-
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.0'
 # Use Puma as the app server
@@ -14,24 +13,18 @@ gem 'coffee-rails', '~> 4.2'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
-gem 'omniauth-google-oauth2'
-
-gem 'figaro'
-
-gem 'sidekiq'
-
-gem 'httparty'
-
+gem 'omniauth-google-oauth2' # Gem for Oauth2 strategy for Google
+gem 'figaro' # Gem for securely configuring Rails applications
+gem 'sidekiq' # Gem for background processing
+gem 'httparty' # Gem for querying web services and examine the resulting output
 gem 'sinatra', require: false
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
-
-gem 'will_paginate'
-
-gem 'domainatrix'
+gem 'will_paginate' # Gem for Pagination
+gem 'domainatrix' # Gem to parse a URL into its canonical form
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
@@ -63,8 +56,8 @@ group :test do
   gem 'shoulda-matchers', require: false # Collection of testing matchers extracted from Shoulda
   gem 'database_cleaner' # Gem for setting strategies for cleaning databases.
   gem 'simplecov', require: false # Gem for Code coverage for Ruby 1.9+
-  gem 'webmock'
-  gem 'vcr'
+  gem 'webmock' #Gem for stubbing and setting expectations on HTTP requests
+  gem 'vcr' # Gem for recording test suite's HTTP interactions
   gem 'rails-controller-testing'
 end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

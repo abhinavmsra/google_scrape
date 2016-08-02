@@ -7,13 +7,15 @@ RSpec.describe KeywordsController, type: :controller do
     context 'when user is logged in' do
       let(:user) { create :user }
 
-      it 'should return a list of keywords' do
+      before(:each) do
         get :index, session: {user_id: user.id}
+      end
+
+      it 'should return a list of keywords' do
         expect(assigns(:keywords).count).to eq(SearchResult.count)
       end
 
       it 'should render the index template' do
-        get :index, session: {user_id: user.id}
         expect(response.body).to render_template('keywords/index')
       end
     end
