@@ -35,6 +35,6 @@ A constraint worth noticing here is the database connection pool size. The appli
     
     d. https://protected-basin-76701.herokuapp.com
     
- 3. Concurrency of individual workers: 4
+3. Concurrency of individual workers: 4
 
 
